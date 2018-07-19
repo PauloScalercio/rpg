@@ -1,10 +1,10 @@
-import GalaxyFighter.GalaxyFighter;
+import samplegame.SampleGame;
 import engine.window.Game;
 
 public class Main {
     public static void main(String[] args) {
-        // test: galaxy fighter
-        Game g = new GalaxyFighter();
+        // test: sample game
+        Game g = new SampleGame();
         g.open();
     }
 }
