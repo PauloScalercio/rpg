@@ -9,17 +9,20 @@ import engine.main.Stage;
 import java.awt.Graphics2D;
 import java.util.ArrayList;
 
-/**
- *
- * @author labccet
- */
+
 public class HomeTown extends Stage {
     // protected Music bgm;
     ArrayList<NPC> villagers;
-
+    ArrayList<Arvore> arvores;
+    ArrayList<Casa> casas;
+    
     public HomeTown() {
         villagers = new ArrayList<>();
-
+        arvores = new ArrayList<>();
+        casas = new ArrayList<>();
+        
+        //Game design para definir localizações de elementos
+        
         int cX = 640; // horizontal center
         int cY = 360; // vertical center
         int dist = 50; // distance between objects
@@ -32,7 +35,14 @@ public class HomeTown extends Stage {
 
         for( NPC person : villagers )
             addObject( person );
+        
+        for( Arvore arvore : arvores )
+            addObject( arvore );
+        
+        for( Casa casa : casas )
+            addObject( casa );
     }
+    
 
     public void nextStage() {};
 }
